@@ -1,0 +1,41 @@
+﻿@page "/manufacturing/supplychain/orderprocessing"
+@inject ManufacturingApiService ApiService
+<h3>OrderProcessing</h3>
+
+@if (OorderProcessingList == null)
+{
+    <p>Loading.....</p>
+}
+else{
+    <table>
+        <thead>
+            <tr>
+                <th>OrderId</th>
+                <th>CustomerName</th>
+                <th>OrderDate</th>
+                <th>DeliveryDate</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in OorderProcessingList){
+                <tr>
+                    <td>@item.CustomerName</td>
+                    <td>@item.OrderId</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.DeliveryDate</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+Hello there Lazzy
+@code {
+    private List<OrderProcessingResponse>? OorderProcessingList;
+    protected override async Task OnInitializedAsync(){
+        List<OrderProcessingResponse> orderProcessingResponses = await ApiService.ListOrderProcessingAsync();
+        OorderProcessingList = orderProcessingResponses;
+    }
+}

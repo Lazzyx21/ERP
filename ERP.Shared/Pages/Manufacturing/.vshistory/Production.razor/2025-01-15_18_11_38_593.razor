@@ -1,0 +1,21 @@
+﻿@page "/Production"
+@inject ProductsApiService api
+@inject NavigationManager nm
+@inject HttpClient httpclient
+
+
+
+<h3>Production</h3>
+
+@if(Responses != null)
+
+
+@code {
+    private List<ProductsListResponse>? Responses;
+
+    private string? Message;
+    private string? ErrorMessage = "";
+
+
+
+}

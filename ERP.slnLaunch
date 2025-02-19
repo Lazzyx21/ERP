@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ERP.Web\\ERP.Web.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "..\\manufacturing_api\\Manufacturing_API.csproj",
+        "Action": "StartWithoutDebugging",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]

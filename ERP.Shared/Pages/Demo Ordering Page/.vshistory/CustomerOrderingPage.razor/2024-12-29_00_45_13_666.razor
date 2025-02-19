@@ -1,0 +1,65 @@
+﻿@page "/Demo Ordering Page/catalog"
+@inject ProductApiServices ProductAPI
+
+<div class="row mb-5">
+    <div class="col">
+        <button class="btn btn-primary" @onclick="CreateNewProduct">New Product</button>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+@if (ProductList == null)
+{
+    <p>Loading.......</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ProductId</th>
+                <th>ProductName</th>
+                <th>Category</th>
+                <th>UnitPrice</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ProductList)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Category</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ProductsListResponse>? ProductList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ProductList = await ProductAPI.GetProductsAsync();
+            Console.WriteLine($"Fetched {ProductList?.Count} products.");
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error fetching products: {ex.Message}");
+        }
+    }
+
+
+    private void CreateNewProduct()
+    {
+        // Redirect or open modal to create a new product
+        Console.WriteLine("Redirecting to create product page...");
+    }
+}

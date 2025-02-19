@@ -1,0 +1,11 @@
+﻿@page "/P"
+@inject ManufacturingApiService ApiServices
+<h3>Products</h3>
+
+@code {
+    private List<ProductsListResponse>? pp;
+
+    protected override async Task OnInitializedAsync(){
+        pp = await ApiServices.ProductsListsAsync();
+    }
+}

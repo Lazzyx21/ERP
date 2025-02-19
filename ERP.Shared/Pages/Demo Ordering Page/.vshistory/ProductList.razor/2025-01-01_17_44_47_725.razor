@@ -1,0 +1,38 @@
+﻿@page "/Demo Ordering Page/products"
+@inject ProductsApiService ApiService
+
+<h3>Product Details</h3>
+
+@if (product == null)
+{
+    <p>Loading product details...</p>
+}
+else
+{
+    <div>
+        @foreach (var item in product)
+        {
+            <p><strong>Product ID:</strong> @item.ProductId</p>
+            <p><strong>Product Name:</strong> @item.ProductName</p>
+            <p><strong>Category:</strong> @item.Category</p>
+            <p><strong>Unit Price:</strong> @item.UnitPrice</p>
+            <p><strong>Description:</strong> @item.Description</p>
+        }
+    </div>
+}
+
+@code {
+    // [Parameter]
+    // public int ProductId { get; set; }
+
+    public Task<ProductsListResponse>? product;
+
+    protected async override Task OnInitializedAsync()
+    {
+        // var products = await ApiService.GetProductsAsync();
+        // product = products.FirstOrDefault(p => p.ProductId == 6);
+
+        var product = await ApiService.GetProductsAsync();
+    }
+    
+}

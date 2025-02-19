@@ -1,0 +1,4 @@
+C:\Project\C#\ERP\ERP\wwwroot\index.html
+C:\Project\C#\ERP\ERP\wwwroot\app.css
+wwwroot\app.css
+wwwroot\index.html

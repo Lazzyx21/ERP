@@ -1,0 +1,55 @@
+﻿@page "/ps3"
+@inject HttpClient http
+<h3>ProductionStage3</h3>
+@if(stage2Responses == null){
+
+}else if(!stage2Responses.Any()){
+
+}else{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Start Date</th>
+                <th>Entry Date</th>
+                <th>Required Date</th>
+                <th>Completed
+                    Qunatity</th>
+                <th>Pending
+                    Qunatity</th>
+                <th>Total
+                    Qunatity</th>
+                <th>Quality Check</th>
+                <th>Status</th>
+                <th>ProductID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach(var items in stage2Responses){
+                    <td>@items.OrderDetailsId</td>
+                    <td>@items.StartDate</td>
+                    <td>@items.Stage2Date</td>
+                    <td>@items.EndDate</td>
+                    <td>@items.OpenQuantityS2</td>
+                    <td>@items.</td>
+                    <td>@items.Quantity</td>
+                    <td>@items.</td>
+                    <td>@items.</td>
+                    <td>@items.</td>
+                }
+            </tr>
+        </tbody>
+    </table>
+}
+
+
+@code {
+    private List<ProductionListStage2Response>? stage2Responses;
+    protected override async Task OnParametersSetAsync()
+    {
+        var resposne = await http.GetFromJsonAsync<GenericApiResponse<List<ProductionListStage2Response>>>("http://localhost:5163/api/production/Stage3Get");
+        
+    }
+
+}

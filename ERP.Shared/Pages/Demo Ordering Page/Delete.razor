@@ -1,0 +1,30 @@
+﻿@page "/delete-product"
+@inject HttpClient Http
+
+<h3>Delete Product</h3>
+
+<div>
+    <label>Product ID:</label>
+    <input type="number" @bind="ProductId" />
+</div>
+<button @onclick="DeleteProduct">Delete</button>
+
+<p>@ResponseMessage</p>
+
+@code {
+    private int ProductId;
+    private string ResponseMessage = "";
+
+    private async Task DeleteProduct()
+    {
+        var response = await Http.DeleteAsync($"http://localhost:5163/api/controller/DeleteProducts?ProductId={ProductId}");
+        if (response.IsSuccessStatusCode)
+        {
+            ResponseMessage = "Product deleted successfully!";
+        }
+        else
+        {
+            ResponseMessage = "Failed to delete product.";
+        }
+    }
+}

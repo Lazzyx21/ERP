@@ -1,0 +1,232 @@
+﻿@page "/Ordering/OrderingPage"
+@inject OrderingApiServices orderProcess
+@inject NavigationManager _navigationManager
+@inject HttpClient Http
+
+@code {
+    private string? ErrorMessage;
+    private int ProductId;
+    private string ResponseMessage = "";
+    private void cart(){
+
+    }
+}
+
+
+
+<h1>OrderingPage</h1>
+
+<br>
+<br>
+<br>
+
+<h3>Anime Light Decor</h3>
+
+<div class="row row-cols-1 row-cols-3 g-5">
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71Zp4i1Rq0L._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+               
+                <button class="btn  btn-secondary btn-sm" onclick="cart">Add to Cart</button>
+                <button class="minus">-</button><input type="text" class="number" value="1" min="1"><button class="plus">+</button>
+
+
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71BvLLvjY8L.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://images-cdn.ubuy.co.in/636afc0555a6dc395468fbf4-3d-led-lamps-illusion-night-light-kamado.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71XNmTmxDJL.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://litlamps.in/cdn/shop/products/WhatsAppImage2023-02-12at12.53.04PM_1.jpg?v=1676188084" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/61f0Q1AOKPL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://onepiece.b-cdn.net/wp-content/uploads/2023/09/Anime-Skul-LED-Neon-Sign-Custom-Neon-Bedroom-Game-Room-Home-Shop-Club-Party-Art-Wall-1.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://img.fruugo.com/product/0/49/228630490_max.jpg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://img.joomcdn.net/2c49d8ca617da8e8a9c9325180b251e8a68e4c1a_original.jpeg" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        <div class="card h-100">
+            <img src="https://litlamps.in/cdn/shop/products/WhatsAppImage2023-02-12at12.53.04PM.jpg?v=1676188084x" class="card-img-top" alt="Anime Neon Light" />
+            <div class="card-body">
+                <h5 class="card-title">Anime Neon Light</h5>
+                <p>Its just a test for the card this dont mind it...</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<h4>Cups</h4>
+<div class="row row-cols-1 row-cols-3 g-4">
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://images.meesho.com/images/products/363647067/v8p7c_512.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://www.redwolf.in/image/cache/catalog/mugs/kakashi-mug-india-599x798.jpg?m=1701164748" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://i.redd.it/anime-mugs-v0-3jdmmduzumnd1.jpg?width=1440&format=pjpg&auto=webp&s=cc55ddfae98a21b7499894d1530d7f0d9fd21941" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://images.meesho.com/images/products/405422628/roihz_512.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://www.grindstore.com/cdn/shop/files/147146-front.jpg?v=1691516178&width=533" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://img.kwcdn.com/product/1eed513678/8d9f8d4d-9d51-41a7-a749-dd1033f9da6e_800x800.jpeg?imageMogr2/auto-orient|imageView2/2/w/800/q/70/format/webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://img.fruugo.com/product/5/16/641047165_max.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://i3.cloudfable.net/styles/550x550/128.138/Black/kitsune-fox-animal-cute-japanese-anime-kawaii-fox-gift-for-womens-coffee-mug-20230712100403-fh31sixo.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://arcanecafe.com/wp-content/uploads/2024/10/maid-anime-catgirl-coffee-mug-with-heart-handle-cute-kawaii-design-copy_20241015_213447-scaled.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="https://preview.redd.it/ha2w1geojht91.png?auto=webp&s=0a2a141f997f340ef263b6727185e4c816fad66c" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Anime Cups</h5>
+                <p>Its just a testing nothing shit going on...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

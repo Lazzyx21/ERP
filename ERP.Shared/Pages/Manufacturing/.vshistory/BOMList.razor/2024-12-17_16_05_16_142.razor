@@ -1,0 +1,42 @@
+﻿@page "/BOMList"
+@inject ManufacturingApiService ApiService
+
+<h3>BOM List</h3>
+
+@if (bomList == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>BOM ID</th>
+                <th>Product ID</th>
+                <th>Material ID</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in bomList)
+            {
+                <tr>
+                    <td>@item.Bomid</td>
+                    <td>@item.ProductId</td>
+                    <td>@item.MaterialId</td>
+                    <td>@item.QuantityRequired</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<BOMListResponse>? bomList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        bomList = await ApiService.GetBomListAsync();
+    }
+}

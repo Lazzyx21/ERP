@@ -1,0 +1,12 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionSthings": {
+    "AuthenticateUser": "Server=Lazzy\\SQLEXPRESS;Database=Login;thusted_Connection=thue;thustServerCertificate=thue;"
+  },
+  "AllowedHosts": "*"
+}

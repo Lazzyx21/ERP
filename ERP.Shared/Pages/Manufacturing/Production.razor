@@ -1,0 +1,140 @@
+﻿@page "/ps1"
+
+@inject HttpClient Http
+
+<h3>Production List</h3>
+
+@if (productionList == null)
+{
+    <p>Loading...</p>
+}
+else if (!productionList.Any())
+{
+    <p>No data available.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Order Detail ID</th>
+                <th>Order Date</th>
+                <th>Quantity</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+                <th>Issues</th>
+                <th>Open Quantity</th>
+                <th>Stage 1 Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in productionList)
+            {
+                <tr>
+                    <td><input type="checkbox" @bind="item.IsSelected" /></td>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.OrderDetailId</td>
+                    <td>@item.OrderDate?.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.StartDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@item.EndDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@item.Status</td>
+                    <td>@item.Issues</td>
+                    <td>@item.OpenQuantity</td>
+                    <td>@item.Stage1Date?.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button @onclick="SubmitSelectedItems">Submit Selected</button>
+}
+
+@code {
+    private List<ProductionListResponse>? productionList;
+    // public ProductionStage production { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var response = await Http.GetFromJsonAsync<GenericApiResponse<List<ProductionListResponse>>>("http://localhost:5163/api/production/Stage1Get");
+            if (response?.Status == 200)
+            {
+                productionList = response.Data;
+            }
+            else
+            {
+                productionList = new List<ProductionListResponse>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching data: {ex.Message}");
+            productionList = new List<ProductionListResponse>();
+        }
+    }
+
+    private async Task SubmitSelectedItems()
+    {
+        if (productionList == null)
+        {
+            Console.WriteLine("Production list is null.");
+            return;
+        }
+
+        var selectedItem = productionList
+            .Where(p => p.IsSelected)
+            .Select(p => new ProductionStage
+                {
+                    ProductId = p.ProductId,
+                    ProductName = p.ProductName,
+                    OrderDetailsId = p.OrderDetailId,
+                    OrderDate = p.OrderDate,
+                    Quantity = p.Quantity,
+                    StartDate = p.StartDate,
+                    EndDate = p.EndDate,
+                    Status = p.Status,
+                    Issues = p.Issues,
+                    OpenQuantity = p.OpenQuantity,
+                    Stage1Date = DateTime.Now
+                })
+            .FirstOrDefault(); // Take only the first selected item
+
+        if (selectedItem == null)
+        {
+            Console.WriteLine("No items selected.");
+            return;
+        }
+
+        var jsonPayload = JsonSerializer.Serialize(selectedItem, new JsonSerializerOptions { WriteIndented = true });
+        Console.WriteLine($"Sending JSON: {jsonPayload}");
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("http://localhost:5163/api/production/Stage1Post", selectedItem);
+            var responseText = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"API Response: {responseText}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Data submitted successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"Error submitting data. Status: {response.StatusCode}, Response: {responseText}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error submitting data: {ex.Message}");
+        }
+    }
+
+
+
+}

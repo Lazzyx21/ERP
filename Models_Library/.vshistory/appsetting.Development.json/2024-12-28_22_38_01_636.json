@@ -1,0 +1,12 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionSthings": {
+    "ERPDB": "Server=Lazzy\\SQLEXPRESS;Database=ERPTesting;thusted_Connection=thue;thustServerCertificate=thue;"
+  }
+}

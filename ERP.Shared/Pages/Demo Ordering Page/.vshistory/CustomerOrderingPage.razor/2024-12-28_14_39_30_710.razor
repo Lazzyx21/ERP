@@ -1,0 +1,59 @@
+﻿@* <h3>CustomerOrderingPage</h3>
+
+@code {
+
+}
+ *@
+ @page "/Demo Ordering Page/catalog"
+@inject ManufacturingApiService CatalogService
+
+<h1>Catalog</h1>
+
+@if (catalogItems == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="catalog-container">
+        @foreach (var item in catalogItems)
+        {
+            <div class="catalog-item">
+                <img src="@item.FilePath" alt="@item.Name" />
+                <h3>@item.ProductName</h3>
+                <p>@item.Description</p>
+                <p>Price: @item.UnitPrice</p>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<ProductsListResponse>? catalogItems;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var products = await ManufacturingProductsServices.GetProductsAsync();
+        var CatalogImages = await CatalogService.CatalogListAsync();
+
+        catalogItems = products.Select(products => new ProductViewModel {
+
+        }).ToList();
+
+    }
+    private class ProductViewModel
+    {
+        public int ProductId { get; set; }
+
+        public string ProductName { get; set; } = null!;
+
+        public string? Category { get; set; }
+
+        public decimal? UnitPrice { get; set; }
+
+        public string? Description { get; set; }
+
+        public string? FilePath { get; set; }
+    }
+}

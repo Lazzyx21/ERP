@@ -1,0 +1,51 @@
+﻿@inject ProductsApiService ProductService
+@inject CatalogApiServices CatalogService
+
+<h3>Product Details</h3>
+
+@if (product == null || productImages == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div>
+        <p><strong>Product ID:</strong> @product.ProductId</p>
+        <p><strong>Product Name:</strong> @product.ProductName</p>
+        <p><strong>Category:</strong> @product.Category</p>
+        <p><strong>Unit Price:</strong> @product.UnitPrice</p>
+        <p><strong>Description:</strong> @product.Description</p>
+
+        <h4>Images:</h4>
+        @if (!productImages.Any())
+        {
+            <p>No images available.</p>
+        }
+        else
+        {
+            <div class="image-gallery">
+                @foreach (var img in productImages)
+                {
+                    <div>
+                        <img src="@img.FilePath" alt="Product Image" width="200" />
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int ProductId { get; set; }
+
+    private ProductsListResponse? product;
+    private List<CatalogListResponse>? productImages;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        product = await ProductService.GetProductsAsync(ProductId);
+        var allImages = await CatalogService.CatalogListAsync();
+        productImages = allImages?.Where(img => img.ProductId == ProductId).ToList();
+    }
+}

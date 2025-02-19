@@ -1,0 +1,56 @@
+﻿@inject ProductsApiService ProductService
+@inject CatalogApiServices CatalogService
+
+<h3>Products with Catalog Images</h3>
+
+@if (products == null || productImages == null)
+{
+    <p>Loading products and images...</p>
+}
+else
+{
+    <div>
+        @foreach (var product in products)
+        {
+            <div class="product-card">
+                <h4>@product.ProductName</h4>
+                <p><strong>Category:</strong> @product.Category</p>
+                <p><strong>Unit Price:</strong> $@product.UnitPrice</p>
+                <p><strong>Description:</strong> @product.Description</p>
+
+                <div class="product-images">
+                    @if (productImages.TryGetValue(product.ProductId, out var images) && images.Any())
+                    {
+                        @foreach (var image in images)
+                        {
+                            <img src="@image.ImageUrl" alt="@product.ProductName Image" width="200" />
+                        }
+                    }
+                    else
+                    {
+                        <p>No images available for this product.</p>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<ProductsListResponse>? products;
+    private Dictionary<int, List<CatalogApiServices>>? productImages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch all products
+        products = await ProductService.GetProductsAsync();
+
+        // Fetch all images
+        var images = await CatalogService.CatalogListAsync();
+
+        // Group images by ProductId for easy lookup
+        productImages = images?
+            .GroupBy(img => img.ProductId)
+            .ToDictionary(g => g.Key, g => g.ToList());
+    }
+}

@@ -1,0 +1,55 @@
+﻿@page "/manufacturing/supplychain/orderprocessing"
+@inject ManufacturingApiService ApiService
+<h3>OrderProcessing</h3>
+
+@if (ProductsLists == null)
+{
+    <p>Loading.....</p>
+}
+else{
+    <table>
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Customer Name</th>
+                <th>Order Date</th>
+                <th>Delivery Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ProductsLists)
+            {
+                <tr>
+                    <td>@item.CustomerName</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.UnitPrice</td>
+                    <td>@item.OrderId</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.DeliveryDate</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    // private List<OrderProcessingResponse>? OList;
+    // protected override async Task OnInitializedAsync()
+    // {
+
+    //     OList = await ApiService.ListOrderProcessingAsync();
+    // }
+    private List<ProductsListResponse>? ProductsLists;
+    private List<OrderListResponse>? orderLists;
+    protected override async Task OnInitializedAsync(){
+        ProductsLists = await ApiService.ProductsListsAsync();
+        orderLists = await ApiService.GetOrdersAsync();
+    }
+
+   
+}

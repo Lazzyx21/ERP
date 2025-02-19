@@ -1,0 +1,11 @@
+C:\Project\C#\ERP\Models_Library\bin\Debug\net9.0\Models_Library.deps.json
+C:\Project\C#\ERP\Models_Library\bin\Debug\net9.0\Models_Library.dll
+C:\Project\C#\ERP\Models_Library\bin\Debug\net9.0\Models_Library.pdb
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\Models_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\Models_Library.AssemblyInfoInputs.cache
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\Models_Library.AssemblyInfo.cs
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\Models_Library.csproj.CoreCompileInputs.cache
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\Models_Library.dll
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\refint\Models_Library.dll
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\Models_Library.pdb
+C:\Project\C#\ERP\Models_Library\obj\Debug\net9.0\ref\Models_Library.dll

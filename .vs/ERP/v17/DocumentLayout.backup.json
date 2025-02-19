@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Project\\C#\\ERP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E765316-6C18-4BFD-B642-384F16747990}|ERP.Shared\\ERP.Shared.csproj|c:\\project\\c#\\erp\\erp.shared\\pages\\ordering\\orderingpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E765316-6C18-4BFD-B642-384F16747990}|ERP.Shared\\ERP.Shared.csproj|solutionrelative:erp.shared\\pages\\ordering\\orderingpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E765316-6C18-4BFD-B642-384F16747990}|ERP.Shared\\ERP.Shared.csproj|c:\\project\\c#\\erp\\erp.shared\\pages\\ordering\\shoppingbag.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E765316-6C18-4BFD-B642-384F16747990}|ERP.Shared\\ERP.Shared.csproj|solutionrelative:erp.shared\\pages\\ordering\\shoppingbag.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E765316-6C18-4BFD-B642-384F16747990}|ERP.Shared\\ERP.Shared.csproj|c:\\project\\c#\\erp\\erp.shared\\pages\\ordering\\order.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E765316-6C18-4BFD-B642-384F16747990}|ERP.Shared\\ERP.Shared.csproj|solutionrelative:erp.shared\\pages\\ordering\\order.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 237,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 396,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderingPage.razor",
+              "DocumentMoniker": "C:\\Project\\C#\\ERP\\ERP.Shared\\Pages\\Ordering\\OrderingPage.razor",
+              "RelativeDocumentMoniker": "ERP.Shared\\Pages\\Ordering\\OrderingPage.razor",
+              "ToolTip": "C:\\Project\\C#\\ERP\\ERP.Shared\\Pages\\Ordering\\OrderingPage.razor",
+              "RelativeToolTip": "ERP.Shared\\Pages\\Ordering\\OrderingPage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T09:20:09.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShoppingBag.razor",
+              "DocumentMoniker": "C:\\Project\\C#\\ERP\\ERP.Shared\\Pages\\Ordering\\ShoppingBag.razor",
+              "RelativeDocumentMoniker": "ERP.Shared\\Pages\\Ordering\\ShoppingBag.razor",
+              "ToolTip": "C:\\Project\\C#\\ERP\\ERP.Shared\\Pages\\Ordering\\ShoppingBag.razor",
+              "RelativeToolTip": "ERP.Shared\\Pages\\Ordering\\ShoppingBag.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T09:19:23.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.razor",
+              "DocumentMoniker": "C:\\Project\\C#\\ERP\\ERP.Shared\\Pages\\Ordering\\Order.razor",
+              "RelativeDocumentMoniker": "ERP.Shared\\Pages\\Ordering\\Order.razor",
+              "ToolTip": "C:\\Project\\C#\\ERP\\ERP.Shared\\Pages\\Ordering\\Order.razor",
+              "RelativeToolTip": "ERP.Shared\\Pages\\Ordering\\Order.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T09:18:29.975Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

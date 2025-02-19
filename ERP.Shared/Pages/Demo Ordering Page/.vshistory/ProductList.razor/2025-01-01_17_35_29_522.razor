@@ -1,0 +1,32 @@
+﻿@page "/Demo Ordering Page/products"
+@inject ProductsApiService ApiService
+
+<h3>Product Details</h3>
+
+@if (product == null)
+{
+    <p>Loading product details...</p>
+}
+else
+{
+    <div>
+        <p><strong>Product ID:</strong> @product.ProductId</p>
+        <p><strong>Product Name:</strong> @product.ProductName</p>
+        <p><strong>Category:</strong> @product.Category</p>
+        <p><strong>Unit Price:</strong> @product.UnitPrice</p>
+        <p><strong>Description:</strong> @product.Description</p>
+    </div>
+}
+
+@code {
+    // [Parameter]
+    // public int ProductId { get; set; }
+
+    private ProductsListResponse? product;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var products = await ApiService.GetProductsAsync();
+        // product = products.FirstOrDefault(p => p.ProductId == 6);
+    }
+}

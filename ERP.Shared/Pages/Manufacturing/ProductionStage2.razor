@@ -1,0 +1,125 @@
+﻿@* functionalities
+1. write a logic, if the present date has exceeded the enddate then write a pending status and warm about it.
+2. use a line bar where i can display the remaining items info..
+3. using some color changing status thing or idk use plain text for now..
+*@
+
+@page "/PS2"
+@inject HttpClient HTTP
+
+<h3>ProductionStage2</h3>
+
+
+@if(displayStage == null){
+    <p>Loading...</p>
+
+}else if(!displayStage.Any()){
+    <p>No data available.</p>
+}else{
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th scope="col">Order ID</th>
+                <th scope="col">Production No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Stage Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Total Quantity</th>
+                <th scope="col">Open Quantity</th>
+                <th scope="col">Issues</th>
+            </tr>
+        </thead>
+        @foreach (var items in displayStage)
+        {
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" @bind="items.IsSelected" /></td>
+                    <td scope="row">@items.OrderDetailsId</td>
+                    <td scope="row">@items.ProductId</td>
+                    <td scope="row">@items.ProductName</td>
+                    <td scope="row">@items.Stage1Date</td>
+                    <td scope="row">@items.EndDate</td>
+                    <td scope="row">@items.Status</td>
+                    <td scope="row">@items.Quantity</td>
+                    <td scope="row"><input type="text" @bind-value=items.OpenQuantityS2/> @items.OpenQuantity</td>
+                    <td scope="row">@items.OpenQuantity</td>
+                    <td scope="row">@items.Issues</td>
+                </tr>
+            </tbody>
+        }
+    </table>
+    <button @onclick="SubmitSelectedItems">Next ASS</button>
+}
+
+@code {
+    private List<ProductionListStage1Response>? displayStage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await HTTP.GetFromJsonAsync<GenericApiResponse<List<ProductionListStage1Response>>>("http://localhost:5163/api/production/Stage2Get");
+        try{
+            if(response?.Status == 200){
+
+                displayStage = response.Data;
+
+            }else{
+
+                displayStage = new List<ProductionListStage1Response>();
+
+            }
+        }catch(Exception ex){
+            Console.WriteLine($"Error fetching data: {ex.Message}");
+            displayStage = new List<ProductionListStage1Response>();
+
+        }
+    }
+
+    private async Task SubmitSelectedItems()
+    {
+        if(displayStage == null)
+        {
+            Console.WriteLine("Production list is null.");
+            return;
+        }
+
+        var selectedItems = displayStage
+        .Where(p => p.IsSelected)
+        .Select(p => new Pstage2
+        {
+                OrderDetailsId = p.OrderDetailsId,
+                ProductId = p.ProductId,
+                ProductName = p.ProductName,
+                Stage2Date = DateTime.Now,
+                EndDate = p.EndDate,
+                Status = p.Status,
+                Quantity = p.Quantity,
+                OpenQuantityS2 = p.OpenQuantityS2,
+                Issues = p.Issues,
+        }).ToList();
+
+        if(selectedItems == null){
+            Console.WriteLine("No items selected.");
+            return;
+        }
+
+        var jsonPayload = JsonSerializer.Serialize(selectedItems, new JsonSerializerOptions { WriteIndented = true });
+        Console.WriteLine($"Sending JSON: {jsonPayload}");
+
+        try{
+            var response = await HTTP.PostAsJsonAsync("http://localhost:5163/api/production/Stage2Post", selectedItems);
+            var responseText = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Api Response: {responseText}");
+            if(response.IsSuccessStatusCode){
+                Console.WriteLine("ASS Has been sended over.");
+            }else{
+                Console.WriteLine($"Error submitted 2 your ass fucker Status: {response.StatusCode}, response: {responseText}");
+            }
+        }catch(Exception ex){
+            Console.WriteLine($"Error Submitting data:{ex.Message}");
+        }
+    }
+
+}

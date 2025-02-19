@@ -1,0 +1,225 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\ERP.Shared.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ERP.Shared.0royi7glaz.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight.png",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight.png"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight10.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight10.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight2.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight2.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight3.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight3.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight4.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight4.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight5.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight5.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight6.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight6.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight7.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight7.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight8.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight8.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\3DNightLight\\3DNightLight9.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\3DNightLight\\3DNightLight9.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups10.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups10.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups2.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups2.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups3.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups3.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups4.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups4.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups5.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups5.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups6.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups6.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups7(edit it).jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups7(edit it).jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups8.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups8.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Cups\\cups9.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Cups\\cups9.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps1.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps1.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps10.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps10.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps2.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps2.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps3.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps3.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps4.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps4.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps5.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps5.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps6.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps6.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps7.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps7.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps8.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps8.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\KeyCaps\\keycaps9.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\KeyCaps\\keycaps9.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard10.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard10.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard2.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard2.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard3.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard3.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard4.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard4.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard5.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard5.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard6.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard6.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard7.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard7.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard8.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard8.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Keyboards\\keyboard9.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Keyboards\\keyboard9.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Mouse\\mouse.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Mouse\\mouse.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Mouse\\mouse2.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Mouse\\mouse2.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Mouse\\mouse3.jpg",
+      "PackagePath": "staticwebassets\\CatalogImages\\Mouse\\mouse3.jpg"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Mouse\\mouse4.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Mouse\\mouse4.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\CatalogImages\\Mouse\\mouse5.webp",
+      "PackagePath": "staticwebassets\\CatalogImages\\Mouse\\mouse5.webp"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Project\\C#\\ERP\\ERP.Shared\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ERP.Shared.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ERP.Shared.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.ERP.Shared.props",
+      "PackagePath": "build\\ERP.Shared.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ERP.Shared.props",
+      "PackagePath": "buildMultiTargeting\\ERP.Shared.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.ERP.Shared.props",
+      "PackagePath": "buildTransitive\\ERP.Shared.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

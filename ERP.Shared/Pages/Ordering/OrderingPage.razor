@@ -1,0 +1,105 @@
+﻿@page "/Ordering/OrderingPage"
+@inject ProductsApiService ProductAPI
+@inject HttpClient Http
+
+<h1>Ordering Page</h1>
+
+<br>
+<br>
+<br>
+
+<h3>Anime Light Decor</h3>
+
+@if (productsListResponses != null)
+{
+    <div class="row row-cols-1 row-cols-3 g-5">
+        @foreach (var product in productsListResponses)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@product.ImagePath" class="card-img-top" alt="Anime Neon Light" />
+                    <div class="card-body">
+                        <h5 class="card-title">@product.ProductName</h5>
+                        <p>Price: @product.UnitPrice</p>
+                        <select @onchange="(e) => UpdateQuantity(product.ProductId, e.Value)">
+                            <!--hidden first option -->
+                            <option value="1" selected hidden>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button @onclick="() => SubmitOrder(product.ProductId)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>Loading products...</p>
+}
+
+@if (!string.IsNullOrEmpty(ResponseMessage))
+{
+    <p class="mt-4">@ResponseMessage</p>
+}
+
+@code {
+    private List<ProductsListResponse>? productsListResponses;
+    private string ResponseMessage;
+
+    // Dictionary to hold selected quantities for each product
+    private Dictionary<int, int> SelectedQuantities = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch products from the Product API
+        productsListResponses = await ProductAPI.GetProductsAsync();
+    }
+
+    private void UpdateQuantity(int productId, object? selectedValue)
+    {
+        if (selectedValue is not null && int.TryParse(selectedValue.ToString(), out var quantity))
+        {
+            SelectedQuantities[productId] = quantity;
+        }
+    }
+
+    private async Task SubmitOrder(int productId)
+    {
+        // Retrieve the selected quantity for the product (default to 1 if not set)
+        var quantity = SelectedQuantities.ContainsKey(productId) ? SelectedQuantities[productId] : 1;
+
+        var orderDetailsRequest = new
+        {
+            OrderId = 0, // Assuming a default OrderId
+            ProductId = productId,
+            Quantity = quantity,
+            OrderDate = DateTime.Now
+        };
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("http://localhost:5163/api/controller/createorderDetails", orderDetailsRequest);
+            if (response.IsSuccessStatusCode)
+            {
+                ResponseMessage = "Order submitted successfully!";
+            }
+            else
+            {
+                ResponseMessage = "Failed to submit order.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ResponseMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+}

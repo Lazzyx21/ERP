@@ -1,0 +1,51 @@
+﻿@page "/Demo Ordering Page/catalog"
+@inject ProductApiServices ProductAPI
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-contholler="" asp-action="Create"> New Product</a>
+    </div>
+    <div class="col">
+    </div>
+</div>
+@if(Catalog == null){
+    <p>Loading.......</p>
+}
+else{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ProductId</th>
+                <th>ProductName</th>
+                <th>Category</th>
+                <th>UnitPrice</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var items in Catalog)
+            {
+                <tr>
+                    <td>@items.ProductId</td>
+                    <td>@items.ProductName</td>
+                    <td>@items.UnitPrice</td>
+                    <td>@items.Category</td>
+                    <td>@items.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+@code{
+    private List<ProductsListResponse>? Catalog;
+    protected override async Task OnInitializedAsync()
+    {
+        try{
+            Catalog = await ProductAPI.GetALLProductsAsync();
+        }catch(Exception ex){
+            Console.WriteLine($"Error fetching products: {ex.Message}");
+            Catalog = new List<ProductsListResponse>(); // Avoid null reference
+        }
+    }
+}

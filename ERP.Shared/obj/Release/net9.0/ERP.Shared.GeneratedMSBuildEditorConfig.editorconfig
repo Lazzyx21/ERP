@@ -1,0 +1,137 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = ERP.Shared
+build_property.RootNamespace = ERP.Shared
+build_property.ProjectDir = C:\Project\C#\ERP\ERP.Shared\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Project\C#\ERP\ERP.Shared
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Layout/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/BOMList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xCT01MaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/CapacityPlanning.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xDYXBhY2l0eVBsYW5uaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Inventory/InventoryTracking.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xJbnZlbnRvcnlcSW52ZW50b3J5VHJhY2tpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Inventory/Inventory_Shipping.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xJbnZlbnRvcnlcSW52ZW50b3J5X1NoaXBwaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Inventory/Lot_SerialNumberTracking.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xJbnZlbnRvcnlcTG90X1NlcmlhbE51bWJlclRyYWNraW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Inventory/ReorderPoint.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xJbnZlbnRvcnlcUmVvcmRlclBvaW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Inventory/StockAudits.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xJbnZlbnRvcnlcU3RvY2tBdWRpdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Inventory/WarehouseMangement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xJbnZlbnRvcnlcV2FyZWhvdXNlTWFuZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/MRP/BillOfMaterials.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xNUlBcQmlsbE9mTWF0ZXJpYWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/MRP/DemandForecasting.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xNUlBcRGVtYW5kRm9yZWNhc3RpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/MRP/InventoryControl.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xNUlBcSW52ZW50b3J5Q29udHJvbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/MRP/LeadTimeOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xNUlBcTGVhZFRpbWVPcmRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/ProductionPlanning.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xQcm9kdWN0aW9uUGxhbm5pbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/QualityControl.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xRdWFsaXR5Q29udHJvbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Supply Chain/DemandPlanning.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xTdXBwbHkgQ2hhaW5cRGVtYW5kUGxhbm5pbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Supply Chain/Logistics&Shipping.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xTdXBwbHkgQ2hhaW5cTG9naXN0aWNzJlNoaXBwaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Supply Chain/OrderProcessing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xTdXBwbHkgQ2hhaW5cT3JkZXJQcm9jZXNzaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/Supply Chain/SupplierCollaborations.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xTdXBwbHkgQ2hhaW5cU3VwcGxpZXJDb2xsYWJvcmF0aW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Manufacturing/WorkOrderManagement.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmluZ1xXb3JrT3JkZXJNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project/C\#/ERP/ERP.Shared/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-z0hsv6lb3l
+
+[C:/Project/C\#/ERP/ERP.Shared/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-luskzekmwi

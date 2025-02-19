@@ -1,0 +1,63 @@
+﻿@page "/Production"
+@inject ProductsApiService api
+@inject ManufacturingApiService bomapi
+@inject NavigationManager NavigationManager
+@inject HttpClient httpclient
+
+
+
+<h3>Production</h3>
+
+@if(Responses != null)
+{
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Materials</th>
+                    <th>
+                        Open
+                        Quantity
+                    </th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Progress</th>
+                    <th>Status</th>
+                    <th>Issues</th>
+                </tr>
+                <tr>
+
+                    @foreach (var item in bomapi)
+                    {
+
+                    }
+                   @*  @foreach (var items in Responses)
+                    {
+                        <td>@items.</td>
+                    } *@
+
+                </tr>
+            </table>
+        </div>
+    </div>
+}
+
+
+@code {
+    private List<ProductsListResponse>? Responses;
+    private List<BOMListResponse>? bs;
+
+    private string? Message;
+    private string? ErrorMessage = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        Responses = await api.GetProductsAsync();
+        bs = await bomapi.GetBomListAsync();
+    }
+    
+
+
+
+}

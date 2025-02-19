@@ -1,0 +1,28 @@
+﻿@inject CatalogApiServices CatalogService
+@page "/Demo Ordering Page/CatalogImages"
+<h3>Catalog Images</h3>
+
+@if (catalogImages == null)
+{
+    <p>Loading images...</p>
+}
+else
+{
+    <div class="image-gallery">
+        @foreach (var img in catalogImages)
+        {
+            <div>
+                <img src="@img.FilePath" alt="Product Image @img.ProductId" width="200" />
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<CatalogListResponse>? catalogImages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        catalogImages = await CatalogService.CatalogListAsync();
+    }
+}
